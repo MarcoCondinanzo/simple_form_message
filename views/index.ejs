@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/modal_style.css">
+    
+    <title>Formulario</title>
+</head>
+
+<body>
+
+
+    <form class="ca_container_form" action="/contacto" method="POST">
+        <h2 class="ca_titulo_form">Déjanos tu Mensaje</h2>
+        <input class="ca_input_contact" type="text" name = "nombre" id="nombre"placeholder="Nombre y Apellidos">
+        <input class="ca_input_contact" type="email" name = "email" id="email" placeholder="correo electrónico">
+        <input class="ca_input_contact" type="number" name = "telefono" id="telefono" placeholder="Teléfono">
+        <textarea class="ca_input_contact" type="text" id="mensaje" name="mensaje" placeholder= "Escriba aquí su mensaje" id="" cols="30" rows="10"></textarea>
+        
+        <button type="submit" id="enviar-consulta"class="open-modal" data-open-target="#modal1">Enviar</button>
+
+    </form>
+
+    
+
+    
+    
+    <%- include('partials/modal'); -%>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/modal.js"></script>
+    <script src="/js/formulario_consulta.js"></script>
+
+
+</body>
+
+</html>
